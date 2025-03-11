@@ -7,6 +7,7 @@ require('dotenv').config();
 const apiKeyMiddleware = require('./middlewares/apiKeyMiddleware');
 const corsOptions = require('./config/corsOptions');
 const userRoutes = require('./routes/userRoutes');
+const electricityPricesRoutes = require('./routes/ElektricityPrices');
 
 
 // Create an Express app
@@ -17,6 +18,7 @@ app.use(cors(corsOptions));
 
 // Use routes
 app.use('/users', userRoutes);
+app.use('/elektricity', electricityPricesRoutes);
  
 
 
